@@ -1,0 +1,225 @@
+/* MODERN CSS RESET & VARIABLES */
+:root {
+  --primary-green: #2ecc71;
+  --dark-green: #27ae60;
+  --bg-light: #f8fbf8;
+  --bg-dark: #121212;
+  --card-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  --glass: rgba(255, 255, 255, 0.85);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth; /* Essential for that "pro" feel */
+}
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-green);
+  border-radius: 10px;
+}
+
+body {
+  background: var(--bg-light);
+  color: #2d3436;
+  transition: all 0.4s ease;
+}
+
+/* HEADER - STICKY GLASSMORPHISM */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 6%;
+  background: var(--glass);
+  backdrop-filter: blur(15px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.typing {
+  font-size: 1.5rem;
+  letter-spacing: -0.5px;
+  color: var(--dark-green);
+}
+
+#theme-toggle {
+  background: transparent;
+  border: 2px solid var(--primary-green);
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+#theme-toggle:hover {
+  background: var(--primary-green);
+  transform: rotate(15deg);
+}
+
+/* FILTER NAVIGATION */
+.filters {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filters button {
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: 10px 24px;
+  border-radius: 50px;
+  background: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.filters button:hover {
+  background: var(--primary-green);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(46, 204, 113, 0.2);
+}
+
+/* MASONRY GALLERY - NO CROPPING */
+.gallery {
+  column-count: 4;
+  column-gap: 25px;
+  padding: 0 6% 50px 6%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) { .gallery { column-count: 3; } }
+@media (max-width: 800px) { .gallery { column-count: 2; } }
+@media (max-width: 500px) { .gallery { column-count: 1; } }
+
+.card {
+  break-inside: avoid;
+  margin-bottom: 25px;
+  border-radius: 20px;
+  background: white;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.9);
+}
+
+/* CONTACT SECTION - PREMIUM LOOK */
+.contact {
+  background: white;
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.contact.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  background: linear-gradient(to right, #2ecc71, #27ae60);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+form input, form textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 16px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background: #fdfdfd;
+  font-size: 1rem;
+}
+
+form button {
+  width: 100%;
+  padding: 16px;
+  background: var(--primary-green);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: var(--dark-green);
+  box-shadow: 0 10px 20px rgba(46, 204, 113, 0.3);
+}
+
+footer {
+  padding: 60px 20px;
+  text-align: center;
+  color: #95a5a6;
+  font-weight: 300;
+}
+
+/* DARK MODE OVERRIDES */
+body.dark {
+  background: #0b0c0c;
+  color: #f1f1f1;
+}
+
+body.dark header {
+  background: rgba(11, 12, 12, 0.9);
+  border-bottom: 1px solid #222;
+}
+
+body.dark .card, body.dark .contact, body.dark .filters button {
+  background: #181a1b;
+  color: white;
+  border-color: #222;
+}
+
+body.dark form input, body.dark form textarea {
+  background: #121212;
+  border-color: #333;
+  color: white;
+}
