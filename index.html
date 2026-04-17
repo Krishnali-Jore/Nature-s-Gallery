@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nature's Gallery</title>
+ <link rel="stylesheet" href="style.css">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <h1 class="typing"></h1>
+  <button id="theme-toggle">🌙</button>
+</header>
+
+<!-- FILTER BUTTONS -->
+<section class="filters">
+  <button onclick="filterImages('all')">All</button>
+  <button onclick="filterImages('flowers')">Flowers</button>
+  <button onclick="filterImages('birds')">Birds</button>
+  <button onclick="filterImages('animals')">Animals</button>
+  <button onclick="filterImages('nature')">Nature</button>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="card flowers"><img src="./Images/flower.avif" /></div>
+  <div class="card birds"><img src="./Images/bird.avif" /></div>
+  <div class="card animals"><img src="./Images/animal.avif" /></div>
+  <div class="card nature"><img src="./Images/nature.avif" /></div>
+  <div class="card flowers"><img src="./Images/flower1.avif" /></div>
+  <div class="card birds"><img src="./Images/bird1.avif" /></div>
+  <div class="card animals"><img src="./Images/animal1.avif" /></div>
+  <div class="card nature"><img src="./Images/nature1.avif" /></div>
+  <div class="card flowers"><img src="./Images/flower2.avif"/></div>
+  <div class="card birds"><img src="./Images/bird2.avif"/></div>
+  <div class="card animals"><img src="./Images/animal2.avif"/></div>
+  <div class="card nature"><img src="./Images/nature2.avif"/></div>
+  <div class="card flowers"><img src="./Images/flower3.avif"/></div>
+  <div class="card birds"><img src="./Images/bird3.avif"/></div>
+  <div class="card animals"><img src="./Images/animal3.avif"/></div>
+  <div class="card nature"><img src="./Images/nature3.avif"/></div>
+  <div class="card flowers"><img src="./Images/flower4.avif"/></div>
+  <div class="card birds"><img src="./Images/bird4.avif"/></div>
+  <div class="card animals"><img src="./Images/animal4.avif"/></div>
+  <div class="card nature"><img src="./Images/nature4.avif"/></div>
+  <div class="card flowers"><img src="./Images/flower5.avif"/></div>
+  <div class="card birds"><img src="./Images/bird5.avif"/></div>
+  <div class="card animals"><img src="./Images/animal5.avif"/></div>
+  <div class="card nature"><img src="./Images/nature5.avif"/></div>
+  <div class="card flowers"><img src="./Images/flower6.avif"/></div>
+  <div class="card birds"><img src="./Images/bird6.avif"/></div>
+  <div class="card animals"><img src="./Images/animal6.avif"/></div>
+  <div class="card nature"><img src="./Images/nature6.avif"/></div>
+  <div class="card flowers"><img src="./Images/flower7.avif"/></div>
+  <div class="card birds"><img src="./Images/bird7.avif"/></div>
+  <div class="card animals"><img src="./Images/animal7.avif"/></div>
+  <div class="card nature"><img src="./Images/nature7.avif"/></div>
+  <div class="card flowers"><img src="./Images/flower8.avif"/></div>
+  <div class="card birds"><img src="./Images/bird8.avif"/></div>
+  <div class="card animals"><img src="./Images/animal8.avif"/></div>
+  <div class="card nature"><img src="./Images/nature8.avif"/></div>
+  <div class="card flowers"><img src="./Images/flower9.avif"/></div>
+  <div class="card birds"><img src="./Images/bird9.avif"/></div>
+  <div class="card animals"><img src="./Images/animal9.avif"/></div>
+  <div class="card nature"><img src="./Images/nature9.jpg"/></div>
+  <div class="card flowers"><img src="./Images/flower10.avif"/></div>
+  <div class="card birds"><img src="./Images/bird10.avif"/></div>
+  <div class="card animals"><img src="./Images/animal10.avif"/></div>
+  <div class="card nature"><img src="./Images/nature10.jpg"/></div>
+  <div class="card flowers"><img src="./Images/flower11.avif"/></div>
+  <div class="card birds"><img src="./Images/bird11.avif"/></div>
+  <div class="card animals"><img src="./Images/animal11.avif"/></div>
+  <div class="card nature"><img src="./Images/nature11.jpg"/></div>
+  <div class="card flowers"><img src="./Images/flower12.avif"/></div>
+  <div class="card birds"><img src="./Images/bird12.avif"/></div>
+  <div class="card animals"><img src="./Images/animal12.avif"/></div>
+  <div class="card nature"><img src="./Images/nature12.jpg"/></div>
+  <div class="card flowers"><img src="./Images/flower13.avif"/></div>
+  <div class="card birds"><img src="./Images/bird13.avif"/></div>
+  <div class="card animals"><img src="./Images/animal13.avif"/></div>
+  <div class="card nature"><img src="./Images/nature13.avif"/></div>
+  <div class="card flowers"><img src="./Images/flower14.avif"/></div>
+  <div class="card birds"><img src="./Images/bird14.avif"/></div>
+  <div class="card animals"><img src="./Images/animal14.avif"/></div>
+  <div class="card nature"><img src="./Images/nature14.avif"/></div>
+  <div class="card flowers"><img src="./Images/flower15.avif"/></div>
+  <div class="card birds"><img src="./Images/bird15.avif"/></div>
+  <div class="card animals"><img src="./Images/animal15.avif"/></div>
+  <div class="card nature"><img src="./Images/nature15.avif"/></div>
+  <div class="card flowers"><img src="./Images/flower16.avif"/></div>
+  <div class="card birds"><img src="./Images/bird16.avif"/></div>
+  <div class="card animals"><img src="./Images/animal16.avif"/></div>
+  <div class="card nature"><img src="./Images/nature16.avif"/></div>
+  <div class="card flowers"><img src="./Images/flower17.avif"/></div>
+  <div class="card birds"><img src="./Images/bird17.avif"/></div>
+  <div class="card animals"><img src="./Images/animal17.avif"/></div>
+  <div class="card nature"><img src="./Images/nature17.avif"/></div>
+  <div class="card flowers"><img src="./Images/flower18.avif"/></div>
+  <div class="card birds"><img src="./Images/bird18.avif"/></div>
+  <div class="card animals"><img src="./Images/animal18.avif"/></div>
+  <div class="card nature"><img src="./Images/nature18.avif"/></div>
+  <div class="card flowers"><img src="./Images/flower19.avif"/></div>
+  <div class="card birds"><img src="./Images/bird19.avif"/></div>
+  <div class="card animals"><img src="./Images/animal19.avif"/></div>
+  <div class="card nature"><img src="./Images/nature19.avif"/></div>
+  <div class="card flowers"><img src="./Images/flower20.avif"/></div>
+  <div class="card birds"><img src="./Images/bird20.avif"/></div>
+  <div class="card animals"><img src="./Images/animal20.avif"/></div>
+  <div class="card nature"><img src="./Images/nature20.avif"/></div>
+  
+</section>
+
+<!-- CONTACT FORM -->
+<section class="contact">
+  <h2>Contact Me</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer>
+  <p>✨ Nature Gallery</p>
+</footer>
+
+<script>
+// THEME TOGGLE
+const toggleBtn = document.getElementById("theme-toggle");
+if(localStorage.getItem("theme") === "dark"){
+  document.body.classList.add("dark");
+}
+
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+});
+
+// TYPING EFFECT
+const text = "🌿 Welcome to Nature Gallery";
+let i = 0;
+function typing(){
+  if(i < text.length){
+    document.querySelector(".typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing, 50);
+  }
+}
+typing();
+
+// FILTER FUNCTION
+function filterImages(category){
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(card => {
+    if(category === 'all' || card.classList.contains(category)){
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+// SCROLL ANIMATION
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+document.querySelectorAll('.card, .contact').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
